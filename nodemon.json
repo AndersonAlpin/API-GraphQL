@@ -5,5 +5,5 @@
     "dist",
     "node_modules"
   ],
-  "exec": "npx babel src/index.ts"
+  "exec": "ts-node --files ./src/index.ts"
 }
