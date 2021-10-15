@@ -6,7 +6,7 @@
   "author": "AndersonAlpin <andersonalpin@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "npx nodemon"
+    "dev": "npx nodemon -e ts,gql"
   },
   "devDependencies": {
     "@types/node": "*",
@@ -18,6 +18,7 @@
     "apollo-server": "^3.3.0",
     "dotenv": "^10.0.0",
     "graphql": "^15.6.1",
+    "merge-graphql-schemas": "^1.7.8",
     "mongoose": "^6.0.10",
     "ts-node": "^10.3.0"
   }
