@@ -2,8 +2,8 @@ import Post from '../../../models/Post';
 
 export default {
   Query: {
-    Posts: () => Post.find(),
-    Post: (_, { id }) => Post.findById(id),
+    posts: () => Post.find(),
+    post: (_, { id }) => Post.findById(id),
   },
   Mutation: {
     createPost: (_, { postInput }) => Post.create(postInput),

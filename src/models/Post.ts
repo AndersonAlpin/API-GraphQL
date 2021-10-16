@@ -11,9 +11,9 @@ const Schema = new mongoose.Schema({
   },
   author: {
     type: mongoose.Schema.Types.ObjectId,
-    refs: 'Users',
+    refs: 'users',
     required: true,
   }
 });
 
-export default mongoose.model('Posts', Schema);
+export default mongoose.model('posts', Schema);

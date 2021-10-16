@@ -13,11 +13,11 @@ input PostInput {
 
 type Query {
   posts: [Post!]!
-  post(id: ID!): Post! 
+  post(id: ID!): Post!
 }
 
 type Mutation {
-  createPost(PostInput: PostInput): Post!
-  updatePost(id: ID, PostInput: PostInput): Post!
+  createPost(postInput: PostInput): Post!
+  updatePost(id: ID, postInput: PostInput): Post!
   deletePost(id: ID!): Boolean
 }
