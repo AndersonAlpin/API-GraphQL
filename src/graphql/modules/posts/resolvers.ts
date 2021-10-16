@@ -7,7 +7,7 @@ export default {
   },
   Mutation: {
     createPost: async (_, { postInput }) => await Post.create(postInput),
-    updatePost: async (_, { id, postInput }) => await Post.findOneAndUpdate(id, postInput, { new: true }),
-    deletePost: async (_, { id }) => !!(await Post.findOneAndDelete(id)),
+    updatePost: async (_, { id, postInput }) => await Post.findByIdAndUpdate(id, postInput, { new: true }),
+    deletePost: async (_, { id }) => !!(await Post.findByIdAndDelete(id)),
   }
 }

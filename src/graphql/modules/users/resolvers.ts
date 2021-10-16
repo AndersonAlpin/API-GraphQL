@@ -7,7 +7,7 @@ export default {
   },
   Mutation: {
     createUser: async (_, { userInput }) => await User.create(userInput),
-    updateUser: async  (_, { id, userInput }) => await User.findOneAndUpdate(id, userInput, { new: true }),
-    deleteUser: async (_, { id }) => !!(await User.findOneAndDelete(id)),
+    updateUser: async  (_, { id, userInput }) => await User.findByIdAndUpdate(id, userInput, { new: true }),
+    deleteUser: async (_, { id }) => !!(await User.findByIdAndDelete(id)),
   }
 }
