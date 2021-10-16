@@ -2,12 +2,12 @@ import Post from '../../../models/Post';
 
 export default {
   Query: {
-    posts: () => Post.find(),
-    post: (_, { id }) => Post.findById(id),
+    posts: async () => await Post.find(),
+    post: async (_, { id }) => await Post.findById(id),
   },
   Mutation: {
-    createPost: (_, { postInput }) => Post.create(postInput),
-    updatePost: (_, { id, postInput }) => Post.findOneAndUpdate(id, postInput, { new: true }),
+    createPost: async (_, { postInput }) => await Post.create(postInput),
+    updatePost: async (_, { id, postInput }) => await Post.findOneAndUpdate(id, postInput, { new: true }),
     deletePost: async (_, { id }) => !!(await Post.findOneAndDelete(id)),
   }
 }
